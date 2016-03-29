@@ -1,0 +1,15 @@
+.RepositoryListItem {
+  margin: 0.25rem 0.5rem;
+}
+
+.actionButtons {
+  float: right;
+}
+
+.actionButtons li {
+  float: right;
+}
+
+.actionButton {
+  margin: 0.25rem 0.5rem;
+}
