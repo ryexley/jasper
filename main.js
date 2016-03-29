@@ -10,18 +10,16 @@ const DEV = process.env.NODE_ENV === "development";
 
 const defaultOptions = {
   index: `file://${ __dirname }/app/app.html`,
-  icon: `${ __dirname }/icon.png`
+  icon: `${ __dirname }/icon.png`,
+  width: 500
 };
 
 const devOptions = {
   height: 650,
-  width: 400,
   "always-on-top": true
 };
 
-const prodOptions = {
-  width: 400
-};
+const prodOptions = {};
 
 const menubarOptions = DEV ?
   _.extend( defaultOptions, devOptions ) :
