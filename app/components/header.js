@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router";
-import styles from "../css/components/repository-list-item.css";
+import styles from "../css/components/header.css";
 import Octicon from "./octicon";
 
-class RepositoryListItem extends React.Component {
+class Header extends React.Component {
 
   constructor() {
     super();
@@ -63,41 +63,35 @@ class RepositoryListItem extends React.Component {
   componentWillUnmount() {}
 
   render() {
-    const repo = this.props.repository;
-
     return (
-      <div className={ styles.RepositoryListItem }>
-        <a href={ repo.html_url }>{ repo.name }</a>
-        <ul className={ styles.actionButtons }>
-          <li>
-            <Link to={ `/repo/${ repo.id }/shipit` } className={ styles.actionButton } title="Ship it (tag and release)">
-              <Octicon name="squirrel" />
-            </Link>
-          </li>
-          <li>
-            <Link to={ `/repo/${ repo.id }/tags` } className={ styles.actionButton } title="Tags and Releases">
-              <Octicon name="tag" />
-            </Link>
-          </li>
-          <li>
-            <Link to={ `/repo/${ repo.id }/pull-requests` } className={ styles.actionButton } title="Pull Requests">
-              <Octicon name="git-pull-request" />
-            </Link>
-          </li>
-          <li>
-            <Link to={ `/repo/${ repo.id }/branches` } className={ styles.actionButton } title="Branches">
-              <Octicon name="git-branch" />
-            </Link>
-          </li>
-        </ul>
-      </div>
+      <header>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">
+                <Octicon name="three-bars" />
+              </Link>
+            </li>
+            <li>
+              <Link to="/" title="Back">
+                <Octicon name="chevron-left" />
+              </Link>
+            </li>
+            <li>
+              <Link to="/" title="Forward">
+                <Octicon name="chevron-right" />
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </header>
     );
   }
 
 }
 
-RepositoryListItem.propTypes = {};
+Header.propTypes = {};
 
-RepositoryListItem.defaultProps = {};
+Header.defaultProps = {};
 
-export default RepositoryListItem;
+export default Header;

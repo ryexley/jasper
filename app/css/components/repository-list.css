@@ -1,4 +1,5 @@
 .RepositoryList {
+  @mixin unstyled-list;
   margin: 1rem;
   padding: 0;
 }

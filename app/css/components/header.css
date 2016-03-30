@@ -1,0 +1,11 @@
+header {
+  nav {
+    ul {
+      @mixin unstyled-list;
+
+      li {
+        float: left;
+      }
+    }
+  }
+}

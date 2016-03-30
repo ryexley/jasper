@@ -1,8 +1,10 @@
 .RepositoryListItem {
+  @mixin unstyled-list;
   margin: 0.25rem 0.5rem;
 }
 
 .actionButtons {
+  @mixin unstyled-list;
   float: right;
 }
 

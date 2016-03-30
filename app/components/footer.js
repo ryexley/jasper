@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router";
-import styles from "../css/components/repository-list-item.css";
+import styles from "../css/components/footer.css";
 import Octicon from "./octicon";
 
-class RepositoryListItem extends React.Component {
+class Footer extends React.Component {
 
   constructor() {
     super();
@@ -63,41 +63,16 @@ class RepositoryListItem extends React.Component {
   componentWillUnmount() {}
 
   render() {
-    const repo = this.props.repository;
-
     return (
-      <div className={ styles.RepositoryListItem }>
-        <a href={ repo.html_url }>{ repo.name }</a>
-        <ul className={ styles.actionButtons }>
-          <li>
-            <Link to={ `/repo/${ repo.id }/shipit` } className={ styles.actionButton } title="Ship it (tag and release)">
-              <Octicon name="squirrel" />
-            </Link>
-          </li>
-          <li>
-            <Link to={ `/repo/${ repo.id }/tags` } className={ styles.actionButton } title="Tags and Releases">
-              <Octicon name="tag" />
-            </Link>
-          </li>
-          <li>
-            <Link to={ `/repo/${ repo.id }/pull-requests` } className={ styles.actionButton } title="Pull Requests">
-              <Octicon name="git-pull-request" />
-            </Link>
-          </li>
-          <li>
-            <Link to={ `/repo/${ repo.id }/branches` } className={ styles.actionButton } title="Branches">
-              <Octicon name="git-branch" />
-            </Link>
-          </li>
-        </ul>
-      </div>
+      <footer>
+      </footer>
     );
   }
 
 }
 
-RepositoryListItem.propTypes = {};
+Footer.propTypes = {};
 
-RepositoryListItem.defaultProps = {};
+Footer.defaultProps = {};
 
-export default RepositoryListItem;
+export default Footer;

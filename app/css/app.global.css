@@ -1,0 +1,14 @@
+@import "./common/variables";
+@import "./common/mixins";
+@import "./common/typography";
+@import "./common/layout";
+
+body {
+  background-color: $appBackgroundColor;
+}
+
+a {
+  color: #36c;
+  opacity: .75;
+  text-decoration: none;
+}

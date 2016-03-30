@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import RepositoryListItem from "./repository-list-item";
-import styles from "./repository-list.css";
+import styles from "../css/components/repository-list.css";
 import repositories from "../mock-data/repositories.json";
 
 class RepositoryList extends React.Component {
